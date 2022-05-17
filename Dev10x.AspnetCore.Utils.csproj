@@ -18,6 +18,7 @@
     <Summary>Basic utility </Summary>
     <PackageTags>NodaTime AspNetCore5 Collections</PackageTags>
     <Title>AspnetCore.Utils</Title>
+    <PackageId>Dev10x.AspnetCore.Utils</PackageId>
   </PropertyGroup>
 
   <ItemGroup>
