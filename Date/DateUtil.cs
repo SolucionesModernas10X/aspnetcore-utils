@@ -14,41 +14,48 @@
 //    limitations under the License.
 using System;
 using NodaTime;
-/// <summary>
-/// This class exists derived from the time representation problems that .net has
-/// For more information:
-/// https://blog.nodatime.org/2011/08/what-wrong-with-datetime-anyway.html
-/// 
-/// </summary>
+
 namespace Dev10x.AspnetCore.Utils.Date
 {
-	public class DateUtil
-	{
-		private readonly DateTimeZone _timeZone;
 
-		//this class can only be instantiated by explicitly indicating the timezone
-		public DateUtil(string timeZone)
-		{
-				_timeZone = DateTimeZoneProviders.Tzdb[timeZone];
-		}
+    /// <summary>
+    /// Utility to get date based on time zone
+    /// This class exists derived from the time representation problems that .net has
+    /// For more information:
+    /// https://blog.nodatime.org/2011/08/what-wrong-with-datetime-anyway.html
+    /// </summary>
+    public class DateUtil
+    {
+        private readonly DateTimeZone _timeZone;
 
-		//set to private to prevent it from being instantiated without the timezone
-		private DateUtil()		{
-			
-		}
-
-
-		/// <summary>
-		/// Gets the current date and time, considering the timezone with which the class was instantiated
-		/// </summary>
-		/// <returns></returns>
-		public DateTime GetTime()
+        /// <summary>
+        /// Gets the current date and time, considering the timezone with which the class was instantiated
+        /// with an "unspecified" kind 
+        /// </summary>
+        /// <returns></returns>
+        public DateTime GetTime()
         {
-			return Instant.FromDateTimeUtc(DateTime.UtcNow)
-					.InZone(_timeZone)
-					.ToDateTimeUnspecified();
-		}
+            return Instant.FromDateTimeUtc(DateTime.UtcNow)
+                    .InZone(_timeZone)
+                    .ToDateTimeUnspecified();
+        }
 
+        /// <summary>
+        /// Constructor for specific timeZone for getTime()
+        /// This class must be instantiated by explicitly timezone by default
+        /// </summary>
+        /// <param name="timeZone"></param>
+        //
+        public DateUtil(string timeZone)
+        {
+            _timeZone = DateTimeZoneProviders.Tzdb[timeZone];
+        }
 
-	}
+        //set to private to prevent it from being instantiated without the timezone
+        private DateUtil()
+        {
+
+        }
+
+    }
 }

@@ -1,36 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
-
-  <PropertyGroup>
-    <TargetFramework>net5.0</TargetFramework>
-    <PackageVersion>0.1</PackageVersion>
-    <Authors>Dev10x</Authors>
-    <Copyright>Soluciones Modernas 10x. Licence under the Apache License, Version 2.0</Copyright>
-    <PackageLicenseUrl>https://www.apache.org/licenses/LICENSE-2.0</PackageLicenseUrl>
-    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <Owners>Soluciones Modernas 10x</Owners>
-    <Description>Basic utility to validate empty collections and get the current time more accurately based on your time zone</Description>
-    <NeutralLanguage>en-US</NeutralLanguage>
-    <PackageIconUrl>https://avatars.githubusercontent.com/t/6092804?s=280&amp;v=4</PackageIconUrl>
-    <PackageProjectUrl>https://github.com/SolucionesModernas10X/aspnetcore-utils</PackageProjectUrl>
-    <PackOnBuild>true</PackOnBuild>
-    <DevelopmentDependency>true</DevelopmentDependency>
-    <PackageReleaseNotes>Adding classes for validate empty collections and get the current time more accurately based on your time zone</PackageReleaseNotes>
-    <Summary>Basic utility </Summary>
-    <PackageTags>NodaTime AspNetCore5 Collections</PackageTags>
-    <Title>AspnetCore.Utils</Title>
-    <PackageId>Dev10x.AspnetCore.Utils</PackageId>
-  </PropertyGroup>
-
-  <ItemGroup>
-    <None Remove="Date\" />
-    <None Remove="Collections\" />
-    <None Remove="NodaTime" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Date\" />
-    <Folder Include="Collections\" />
-  </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="NodaTime" Version="3.1.0" />
-  </ItemGroup>
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<PackageVersion>0.1.3</PackageVersion>
+		<Authors>Dev10x</Authors>
+		<Description>Basic utility to validate empty collections and get the current time more accurately based on your time zone</Description>
+		<Owners>Soluciones Modernas 10x</Owners>
+		<Title>AspnetCore Utils</Title>
+		<Copyright>Soluciones Modernas 10x. Licence under the Apache License, Version 2.0</Copyright>
+		<PackageIconUrl>https://avatars.githubusercontent.com/t/6092804?s=280&amp;v=4</PackageIconUrl>
+		<NeutralLanguage>en-US</NeutralLanguage>
+		<PackageLicenseUrl>https://www.apache.org/licenses/LICENSE-2.0</PackageLicenseUrl>
+		<PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+		<PackageProjectUrl>https://github.com/SolucionesModernas10X/aspnetcore-utils</PackageProjectUrl>
+		<PackageTags>NodaTime AspNetCore Collections Date</PackageTags>
+		<PackageId>Dev10x.AspnetCore.Utils</PackageId>
+		<ReleaseVersion>0.1.3</ReleaseVersion>
+	</PropertyGroup>
+	<ItemGroup>
+		<Folder Include="Date\" />
+		<Folder Include="Collections\" />
+	</ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="NodaTime" Version="3.1.0" />
+	</ItemGroup>
 </Project>
