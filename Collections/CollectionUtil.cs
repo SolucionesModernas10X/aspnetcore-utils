@@ -18,22 +18,25 @@ using System.Linq;
 
 namespace Dev10x.AspnetCore.Utils.Collections
 {
+    /// <summary>
+    /// Utility methods for Collections 
+    /// </summary>
     public class CollectionUtil
     {
         public CollectionUtil()
         {
         }
 
-		/// <summary>
+        /// <summary>
         /// Validates that a list of type T is not empty or null
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <param name="list"></param>
         /// <returns></returns>
-		public static bool IsEmpty<T>(List<T> list)
-		{
-			return !list?.Any() ?? true;
-		}
+        public static bool IsEmpty<T>(List<T> list)
+        {
+            return !list?.Any() ?? true;
+        }
 
         /// <summary>
         /// Validates that a generic list is not empty or null
@@ -42,9 +45,9 @@ namespace Dev10x.AspnetCore.Utils.Collections
         /// <param name="list"></param>
         /// <returns></returns>
         public static bool IsEmpty<T>(IList<T> list)
-		{
-			return !list?.Any() ?? true;
-		}
+        {
+            return !list?.Any() ?? true;
+        }
 
         /// <summary>
         /// Validates that an enumerable list is not empty or null
@@ -53,9 +56,9 @@ namespace Dev10x.AspnetCore.Utils.Collections
         /// <param name="list"></param>
         /// <returns></returns>
 		public static bool IsEmpty<T>(IEnumerable<T> list)
-		{
-			return !list?.Any() ?? true;
-		}
+        {
+            return !list?.Any() ?? true;
+        }
 
-	}
+    }
 }

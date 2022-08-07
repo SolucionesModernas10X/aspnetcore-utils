@@ -1,8 +1,10 @@
-# aspnetcore-utils
-Basic utility to validate empty collections and get the current time more accurately based on your time zone
+10X AspNetCore Utils
+==========================
+10X AspNetCore Utils is a utility module to validate empty collections and get the current time more accurately based on your time zone
 
-#Framework
-Asp.Net Core 5
+* [Company website](https://10x.gt)
 
-#Dependencies
-Noda Time 3.1.0+
+## Related projects
+These are some other repos for related projects:
+* [10x AspNetCore Commons](https://github.com/SolucionesModernas10X/aspnetcore-commons-api)
+* [NodaTime](https://github.com/nodatime/nodatime)
